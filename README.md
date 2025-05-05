@@ -48,7 +48,7 @@ jupyter notebook
 
 2. Open the file: `Fasta RBCA R1.ipynb`
 
-3. Follow the notebook cells step-by-step.
+3. Follow the notebook step-by-step.
 
 📂 **Note**: Make sure your FASTA file is placed in the **same directory** as the notebook. The script automatically detects the latest `.fasta` file for processing.
 
