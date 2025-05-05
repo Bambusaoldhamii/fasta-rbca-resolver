@@ -54,7 +54,7 @@ jupyter notebook
 
 ## Citation
 
-> He, Jie-Long. (2025). *Fasta RBCA R1: Rule-Based Country Assignment (RBCA) for Avian Influenza FASTA files* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.15341375
+> He, Jie-Long. (2025). *Fasta RBCA R1: Rule-Based Country Assignment (RBCA) for Avian Influenza FASTA files* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.15342223
 
 ## License
 
