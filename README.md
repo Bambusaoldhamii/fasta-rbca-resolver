@@ -1,4 +1,4 @@
-# Rule-Based Country Assignment (RBCA) for Avian Influenza Sequences
+# Rule-Based Country Assignment (RBCA) for Avian Influenza H5 HA Sequences
 
 This repository contains the implementation of a rule-based pipeline for assigning standardized ISO 3166-1 country names to geographic metadata embedded in avian influenza FASTA headers. The main script is implemented in `Fasta RBCA R1.ipynb`.
 
@@ -54,7 +54,7 @@ jupyter notebook
 
 ## Citation
 
-> He, Jie-Long. (2025). *Fasta RBCA R1: Rule-Based Country Assignment Pipeline for FASTA Metadata* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.xxxxxxx
+> He, Jie-Long. (2025). *Fasta RBCA R1: Rule-Based Country Assignment Pipeline for FASTA Metadata* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.15341375
 
 ## License
 
