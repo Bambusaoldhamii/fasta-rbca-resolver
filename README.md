@@ -1,14 +1,30 @@
-# 🧬 Fasta RBCA R1: AI-Aided Resolution of Country Metadata in Avian Influenza FASTA Headers
+# Rule-Based Country Assignment (RBCA) for Avian Influenza H5 HA Sequences
 
-This Jupyter Notebook (`Fasta RBCA R1.ipynb`) performs automated resolution of ambiguous or non-standard location metadata in H5 subtype avian influenza virus HA sequences using a hybrid pipeline: ISO 3166-1 rule-based matching followed by GPT-assisted inference.
+This repository contains the implementation of a rule-based pipeline for assigning standardized ISO 3166-1 country names to geographic metadata embedded in avian influenza FASTA headers. The main script is implemented in `Fasta RBCA R1.ipynb`.
 
-The final output includes country-level classification for all records, accompanied by data tables and geographic visualizations.
+## Overview
 
----
+This study uses a deterministic string-matching strategy to resolve sampling locations from HA segment FASTA headers. Virus names are expected to follow the GISAID-recommended format:  
+`A/host/location/isolate/year`.  
 
-## 📦 Requirements
+The third component (`location`) is extracted using regular expressions and matched to a standardized dictionary (`location_to_country_ISO_3166_1.json`) that maps known location strings to ISO 3166-1 short English country names. Unmatched locations are labeled as `Other`.
 
-Install dependencies:
+## Features
+
+- Deterministic parsing using regular expressions
+- ISO 3166-1-based country mapping (no AI inference)
+- Robust handling of location extraction errors
+- Export of location list and country sample counts
+- Compatible with Jupyter Notebook and Python 3.12+
+
+## Output
+
+- `location_list.csv`: Extracted location names and frequencies
+- `country_stat.csv`: Country-level sample count distribution
+
+## Requirements
+
+Install dependencies with:
 
 ```bash
 pip install -r requirements.txt
@@ -22,8 +38,6 @@ conda activate rbca-env
 pip install -r requirements.txt
 ```
 
----
-
 ## 🚀 How to Run
 
 1. Launch Jupyter:
@@ -34,40 +48,14 @@ jupyter notebook
 
 2. Open the file: `Fasta RBCA R1.ipynb`
 
-3. Follow the notebook cells step-by-step. The pipeline includes:
+3. Follow the notebook cells step-by-step.
 
-- **2.1 Sequence Import and Metadata Extraction**
-- **2.2 Rule-Based Country Mapping**
-- **2.3 GPT-Aided Country Inference**
-- **2.4 Final Country Resolution and Export**
-- **2.5 Static & Interactive Visualizations**
+📂 **Note**: Make sure your FASTA file is placed in the **same directory** as the notebook. The script automatically detects the latest `.fasta` file for processing.
 
----
+## Citation
 
-## 🧪 Example Inputs and Outputs
+> He, Jie-Long. (2025). *Fasta RBCA R1: Rule-Based Country Assignment Pipeline for FASTA Metadata* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.xxxxxxx
 
-- Input file: `examples/sequences.fasta`
-- Output file: `results.csv`  
-- Visualization example: `figures/result_map.png`
-
----
-
-## 🗺️ Visualization Preview
-
-Output includes:
-
-- Cleaned country assignments in table form
-- Static map (matplotlib)
-- Interactive choropleth map (plotly)
-
----
-
-## 📜 License
+## License
 
 MIT License
-
----
-
-## 📌 Citation
-
-> He, Jie-Long. (2025). *Fasta RBCA R1: A Hybrid AI Pipeline for FASTA Metadata Refinement* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.xxxxxxx
