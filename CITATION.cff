@@ -1,11 +1,11 @@
 cff-version: 1.2.0
 message: "If you use this notebook, please cite it as below:"
-title: "Fasta RBCA R1: AI-Enhanced Resolution of Influenza Sequence Metadata"
-version: 1.0.0
+title: "Fasta RBCA R1: Rule-Based Country Assignment (RBCA) for Avian Influenza FASTA files"
+version: 1.0.2
 authors:
   - family-names: YourLastName
     given-names: YourFirstName
     affiliation: Asia University
 date-released: 2025-05-05
-doi: 10.5281/zenodo.xxxxxx
+doi: 10.5281/zenodo.15342773
 url: https://github.com/yourusername/fasta-rbca-resolver
